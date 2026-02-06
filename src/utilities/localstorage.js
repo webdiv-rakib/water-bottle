@@ -13,8 +13,8 @@ const saveCartToLS = cart => {
 
 // save to local storage
 const addToLS = id => {
-    const card = getStoredCart();
-    card.push(id);
+    const cart = getStoredCart();
+    cart.push(id);
     saveCartToLS(cart);
 }
-export { addToLS };
+export { addToLS, getStoredCart };
