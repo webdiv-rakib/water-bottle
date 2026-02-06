@@ -1,0 +1,20 @@
+const getStoredCart = () => {
+    const storedCartString = localStorage.getItem('cart');
+    if (storedCartString) {
+        return JSON.parse(storedCartString);
+    }
+    return [];
+}
+
+const saveCartToLS = cart => {
+    const cartStringified = JSON.stringify(cart);
+    localStorage.setItem('cart', cartStringified);
+}
+
+// save to local storage
+const addToLS = id => {
+    const card = getStoredCart();
+    card.push(id);
+    saveCartToLS(cart);
+}
+export { addToLS };
