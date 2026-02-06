@@ -1,0 +1,10 @@
+.bottle-img {
+    height: 200px;
+}
+
+.bottle-card {
+    border: 2px solid brown;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 20px;
+}
